@@ -12,11 +12,11 @@ import { ResumeItem } from "@/components";
 const RESUME_ITEMS = [
   {
     icon: ChartBarIcon,
-    children: "Bachelor of Science in Computer Science",
+    children: "Bachelor of Informatic Engineering",
   },
   {
     icon: PuzzlePieceIcon,
-    children: "Certified Web Developer ",
+    children: "Certified Fullstack Javascript ",
   },
   {
     icon: CursorArrowRaysIcon,
@@ -25,6 +25,12 @@ const RESUME_ITEMS = [
 ];
 
 export function Resume() {
+
+  const handleOpenPdf = () => {
+    window.open('/pdf/myresume.pdf', '_blank');
+  };
+
+
   return (
     <section className="px-8 py-24">
       <div className="container mx-auto grid w-full grid-cols-1 items-center gap-16 lg:grid-cols-2">
@@ -41,6 +47,7 @@ export function Resume() {
             variant="text"
             color="gray"
             className="flex items-center gap-2"
+            onClick={handleOpenPdf}
           >
             view more
             <ArrowRightIcon

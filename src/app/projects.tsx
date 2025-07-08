@@ -6,45 +6,26 @@ import { getImagePrefix } from "../../utils/utils";
 
 const PROJECTS = [
   {
-    img: `${getImagePrefix()}image/blog-1.svg`,
+    img: `${getImagePrefix()}image/mobile-app.png`,
     title: "Mobile App Development",
     desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
   },
   {
-    img: `${getImagePrefix()}image/blog2.svg`,
+    img: `${getImagePrefix()}image/landing-page.png`,
     title: "Landing Page Development",
     desc: "Promotional landing page for a  fitness website Summer Campaign. Form development included.",
   },
   {
-    img: `${getImagePrefix()}image/blog3.svg`,
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
-  },
-  {
-    img: `${getImagePrefix()}image/blog4.svg`,
+    img: `${getImagePrefix()}image/ecommers.png`,
     title: "E-commerce development",
     desc: "Ecommerce website offering  access to the latest and greatest gadgets and accessories.",
   },
   {
-    img: `${getImagePrefix()}image/blog-1.svg`,
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
+    img: `${getImagePrefix()}image/ibm-logo-2.webp`,
+    title: "IBM Product",
+    desc: "IBM Product handle many project like Cloud Computing, Artificial Intelegent (AI) Business Automation, Data Analitics, and Cyber Security." ,
   },
-  {
-    img: `${getImagePrefix()}image/blog2.svg`,
-    title: "Landing Page Development",
-    desc: "Promotional landing page for a  fitness website Summer Campaign. Form development included.",
-  },
-  {
-    img: `${getImagePrefix()}image/blog3.svg`,
-    title: "Mobile App Development",
-    desc: "Mobile app designed to help users discover and explore local restaurants and cuisines.",
-  },
-  {
-    img: `${getImagePrefix()}image/blog4.svg`,
-    title: "E-commerce development",
-    desc: "Ecommerce website offering  access to the latest and greatest gadgets and accessories.",
-  },
+  
 ];
 
 export function Projects() {

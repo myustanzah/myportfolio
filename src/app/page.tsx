@@ -10,17 +10,19 @@ import Resume from "./resume";
 import Testimonial from "./testimonial";
 import PopularClients from "./popular-clients";
 import ContactForm from "./contact-form";
+import ParticlesBackground from "@/components/ParticleBackground";
 
 export default function Portfolio() {
   return (
     <>
+      <ParticlesBackground/>
       <Navbar />
       <Hero />
-      <Clients />
+      {/* <Clients /> */}
       <Skills />
       <Projects />
       <Resume />
-      <Testimonial />
+      {/* <Testimonial /> */}
       <PopularClients />
       <ContactForm />
       <Footer />

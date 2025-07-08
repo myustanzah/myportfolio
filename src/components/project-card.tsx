@@ -15,14 +15,14 @@ interface ProjectCardProps {
 
 export function ProjectCard({ img, title, desc }: ProjectCardProps) {
   return (
-    <Card color="transparent" shadow={false}>
+    <Card color="transparent" shadow={false} className="transform transition-transform duration-300 hover:scale-105">
       <CardHeader floated={false} className="mx-0 mt-0 mb-6 h-48">
         <Image
           src={img}
           alt={title}
           width={768}
           height={768}
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover rounded-xl"
         />
       </CardHeader>
       <CardBody className="p-0">
@@ -37,9 +37,9 @@ export function ProjectCard({ img, title, desc }: ProjectCardProps) {
         <Typography className="mb-6 font-normal !text-gray-500">
           {desc}
         </Typography>
-        <Button color="gray" size="sm">
+        {/* <Button color="gray" size="sm">
           see details
-        </Button>
+        </Button> */}
       </CardBody>
     </Card>
   );
