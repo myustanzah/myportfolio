@@ -85,18 +85,20 @@ export function ContactForm() {
 
     try {
       // Kirim data ke backend / API
-      const res = await fetch("/api/sendEmail", {
+      const res = await fetch(`/api/sendEmail`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
       });
       
+      console.log(res)
       if (!res.status) throw new Error("Gagal mengirim form");
       const data = await res.json();
       setSuccessMessage(data.message);
       window.alert(JSON.stringify("Sukses " + data.message))
     } catch (err) {
-      window.alert(JSON.stringify("Error" + err));
+      console.log(err)
+      window.alert(JSON.stringify("Error >> " + err));
     } finally {
       setIsSubmitting(false);
       setPayload({ 
