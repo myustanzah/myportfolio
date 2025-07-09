@@ -38,9 +38,9 @@ const SKILLS = [
   },
   {
     icon: EyeIcon,
-    title: "User-Centric Design",
+    title: "Problem Solving",
     children:
-      "My development goes hand-in-hand with an eye for design. I create user interfaces that are not only functional but also aesthetically pleasing, providing a seamless and enjoyable user journey.",
+      "Every project usually has some problem when development process. However, it's not a big deal. Here, I always try to explore wherever resource. So, It's one of my skill that i can ",
   },
   {
     icon: DocumentTextIcon,
@@ -53,7 +53,7 @@ const SKILLS = [
 export function Skills() {
   return (
     <section className="px-8">
-      <div className="container mx-auto mb-20 text-center">
+      <div className="container bg-white mx-auto mb-20 text-center">
         <Typography color="blue-gray" className="mb-2 font-bold uppercase">
           my skills
         </Typography>
@@ -69,7 +69,7 @@ export function Skills() {
           calling. Discover below how I can help you.
         </Typography>
       </div>
-      <div className="container mx-auto grid grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container bg-white mx-auto grid grid-cols-1 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
         {SKILLS.map((props, idx) => (
           <SkillCard key={idx} {...props} />
         ))}

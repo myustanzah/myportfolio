@@ -31,7 +31,7 @@ const PROJECTS = [
 export function Projects() {
   return (
     <section className="py-28 px-8">
-      <div className="container mx-auto mb-20 text-center">
+      <div className="container bg-white mx-auto mb-20 text-center">
         <Typography variant="h2" color="blue-gray" className="mb-4">
           My Projects
         </Typography>
@@ -44,7 +44,7 @@ export function Projects() {
           dreams into reality.
         </Typography>
       </div>
-      <div className="container mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-4">
+      <div className="container bg-white mx-auto grid grid-cols-1 gap-x-10 gap-y-20 md:grid-cols-2 xl:grid-cols-4">
         {PROJECTS.map((props, idx) => (
           <ProjectCard key={idx} {...props} />
         ))}

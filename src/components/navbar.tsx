@@ -14,6 +14,7 @@ import {
   XMarkIcon,
   Bars3Icon,
 } from "@heroicons/react/24/solid";
+import ThemeSwitch from "./ThemeSwitch";
 
 const NAV_MENU = [
   {
@@ -71,6 +72,7 @@ export function Navbar() {
         <Typography color="blue-gray" className="text-lg font-bold">
           Easy Code
         </Typography>
+        
         <ul className="ml-10 hidden items-center gap-8 lg:flex">
           {NAV_MENU.map(({ name, icon: Icon, href }) => (
             <NavItem key={name} href={href}>
@@ -79,12 +81,13 @@ export function Navbar() {
             </NavItem>
           ))}
         </ul>
-        {/* <div className="hidden items-center gap-2 lg:flex">
-          <Button variant="text">Sign In</Button>
+        <div className="hidden items-center gap-2 lg:flex">
+         {/* <Button variant="text">Sign In</Button>
           <a href="#">
             <Button color="gray">blocks</Button>
-          </a>
-        </div> */}
+          </a>  */}
+          {/* <ThemeSwitch></ThemeSwitch> */}
+        </div>
         <IconButton
           variant="text"
           color="gray"
@@ -109,10 +112,11 @@ export function Navbar() {
             ))}
           </ul>
           <div className="mt-6 mb-4 flex items-center gap-2">
-            <Button variant="text">Sign In</Button>
+            {/* <Button variant="text">Sign In</Button>
             <a href="#">
               <Button color="gray">blocks</Button>
-            </a>
+            </a> */}
+            {/* <ThemeSwitch></ThemeSwitch> */}
           </div>
         </div>
       </Collapse>

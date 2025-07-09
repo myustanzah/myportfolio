@@ -27,13 +27,13 @@ const RESUME_ITEMS = [
 export function Resume() {
 
   const handleOpenPdf = () => {
-    window.open('/pdf/myresume.pdf', '_blank');
+    window.open('/pdf/UpdateResume.pdf', '_blank');
   };
 
 
   return (
     <section className="px-8 py-24">
-      <div className="container mx-auto grid w-full grid-cols-1 items-center gap-16 lg:grid-cols-2">
+      <div className="container bg-white mx-auto grid w-full grid-cols-1 items-center gap-16 lg:grid-cols-2">
         <div className="col-span-1">
           <Typography variant="h2" color="blue-gray">
             My Resume

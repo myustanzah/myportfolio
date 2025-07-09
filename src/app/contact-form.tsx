@@ -182,7 +182,7 @@ export function ContactForm() {
                       color="gray"
                       size="lg"
                       variant="static"
-                      label={`First Name ${errors?.name ? "!! Error !!" : ""}`}
+                      label={`First Name * ${errors?.name ? "!! Error !!" : ""}`}
                       name="fName"
                       placeholder="eg. Lucas"
                       onChange={handleChange}
@@ -212,7 +212,7 @@ export function ContactForm() {
                   color="gray"
                   size="lg"
                   variant="static"
-                  label="Email"
+                  label="Email *"
                   name="email"
                   placeholder="eg. lucas@mail.com"
                   onChange={handleChange}
@@ -249,7 +249,7 @@ export function ContactForm() {
                   color="gray"
                   size="lg"
                   variant="static"
-                  label="Your Message"
+                  label="Your Message *"
                   name="msg"
                   onChange={handleChangeTextArea}
                   containerProps={{
