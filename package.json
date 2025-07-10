@@ -6,6 +6,7 @@
   "license": "See license in https://www.creative-tim.com/license",
   "homepage": "https://github.com/themewagon/Next.js-Tailwind-CSS-Portfolio-Template",
   "scripts": {
+    "clean": "rm -rf .next node_modules package-lock.json, .vercel",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -15,8 +16,8 @@
   },
   "dependencies": {
     "@heroicons/react": "2.0.18",
-    "@material-tailwind/react": "2.1.0",
-    "next": "13.4.0",
+    "@material-tailwind/react": "^2.0.5",
+    "next": "^15.3.5",
     "nodemailer": "^7.0.5",
     "react": "18",
     "react-dom": "18"

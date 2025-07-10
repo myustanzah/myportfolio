@@ -86,7 +86,7 @@ export function Navbar() {
           <a href="#">
             <Button color="gray">blocks</Button>
           </a>  */}
-          {/* <ThemeSwitch></ThemeSwitch> */}
+          <ThemeSwitch></ThemeSwitch>
         </div>
         <IconButton
           variant="text"
@@ -116,7 +116,7 @@ export function Navbar() {
             <a href="#">
               <Button color="gray">blocks</Button>
             </a> */}
-            {/* <ThemeSwitch></ThemeSwitch> */}
+            <ThemeSwitch></ThemeSwitch>
           </div>
         </div>
       </Collapse>

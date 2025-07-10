@@ -2,8 +2,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
-import { Layout, FixedPlugin } from "@/components";
-import { ThemeProvider } from "@/context/ThemeContext"
+import { AppLayout, FixedPlugin } from "@/components";
+import { CustomContextProvider } from "@/context/CustomContextProvider"
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -40,12 +40,12 @@ export default function RootLayout({
         />
       </head>
       <body className={roboto.className}>
-          <ThemeProvider>
-            <Layout>
+          <CustomContextProvider>
+            <AppLayout>
                 {children}
                 <FixedPlugin />
-            </Layout>
-          </ThemeProvider>
+            </AppLayout>
+          </CustomContextProvider>
       </body>
     </html>
   );

@@ -259,7 +259,7 @@ export function ContactForm() {
                   }}
                 />
                 <div className="w-full flex flex-col items-end gap-3">
-                  <Button className="w-full md:w-fit" disabled={isSubmitting} color="gray" size="md" type="submit">
+                  <Button className="w-full md:w-fit !bg-black" disabled={isSubmitting} size="md" type="submit">
                     {isSubmitting ? "Send message ..." : "Send"}
                   </Button>
                   {successMessage && 

@@ -1,6 +1,6 @@
 // components/ThemeSwitch.tsx
 'use client';
-import { useTheme } from '@/context/ThemeContext';
+import { useTheme } from '@/context/CustomContextProvider';
 
 export default function ThemeSwitch() {
   const { theme, toggleTheme } = useTheme();
