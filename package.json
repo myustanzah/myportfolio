@@ -6,7 +6,7 @@
   "license": "See license in https://www.creative-tim.com/license",
   "homepage": "https://github.com/themewagon/Next.js-Tailwind-CSS-Portfolio-Template",
   "scripts": {
-    "clean": "rm -rf .next node_modules package-lock.json, .vercel",
+    "clean": "rm -rf .next node_modules package-lock.json, .vercel out",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
