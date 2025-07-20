@@ -11,7 +11,7 @@ export default function ExperienceSection() {
 
            <JobExperienceCard
             company="PT. Nusantara Duta Solusindo"
-            role="Software Developer IBM | Freelance"
+            role="Software Developer IBM | Fulltime"
             period="October 2023 - Current"
             location="Jakarta, Indonesia"
             description={`For this Company, As Software Developer until now, I was handle 3 Project. \n
