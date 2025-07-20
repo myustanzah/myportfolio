@@ -5,15 +5,15 @@ import Image from "next/image";
 import { Typography, Card, CardBody, Avatar } from "@material-tailwind/react";
 import { getImagePrefix } from "../../../utils/utils";
 
-export function Testimonial() {
+export function Experience() {
   const [active, setActive] = React.useState(3);
 
   return (
-    <section className="py-12 px-8 lg:py-24">
-      <div className="container max-w-screen-lg mx-auto">
+    <section className="bg-green-300 py-12 px-8 lg:py-24">
+      <div className="bg-blue-300 container max-w-screen-lg mx-auto">
         <div className="container mx-auto mb-20 text-center">
           <Typography variant="h2" color="blue-gray" className="mb-4">
-            What Clients Say
+            My Experience
           </Typography>
           <Typography
             variant="lead"
@@ -23,7 +23,7 @@ export function Testimonial() {
             with me. My client&apos;s satisfaction is my greatest achievement!
           </Typography>
         </div>
-        <Card color="transparent" shadow={false} className="py-8 lg:flex-row">
+        <Card color="yellow" shadow={false} className="py-8 lg:flex-row">
           <CardBody className="w-full lg:gap-10 h-full lg:!flex justify-between ">
             <div className="w-full mb-10 lg:mb-0">
               <Typography
@@ -98,4 +98,4 @@ export function Testimonial() {
   );
 }
 
-export default Testimonial;
+export default Experience;
