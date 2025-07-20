@@ -91,13 +91,13 @@ export function ContactForm() {
         body: JSON.stringify(payload),
       });
       
-      console.log(res)
+      
       if (!res.status) throw new Error("Gagal mengirim form");
       const data = await res.json();
       setSuccessMessage(data.message);
       window.alert(JSON.stringify("Sukses " + data.message))
     } catch (err) {
-      console.log(err)
+      
       window.alert(JSON.stringify("Error >> " + err));
     } finally {
       setIsSubmitting(false);
