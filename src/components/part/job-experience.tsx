@@ -17,7 +17,8 @@ export default function ExperienceSection() {
             description={`For this Company, As Software Developer until now, I was handle 3 Project. \n
                 1. Migration Data (Mandiri Utama Finance). This project was migration data where the data size is 11 Terabyte. Here, i as Custom Apps Developer where this apps Monitoring the migration data. I using React JS, As Frontend. \n
                 2. Upgrade version (CIMB Niaga Bank). This project was upgrade version of IBM Product Content Manager OnDemand. Function of this software is can handle massive report without delay when rendering in Browser. \n
-                3. Upgrade version (Bank Woory Saudara). This project also upgrade version. however, using another IBM Product. The Product is IBM Business Automation Workflow.
+                3. Upgrade version (Bank Woory Saudara). This project also upgrade version. however, using another IBM Product. The Product is IBM Business Automation Workflow. \n
+                4. Develope Custom Apps Fee Engine (Bank CIMB Niaga). This project was develope custom apps to calculate, reporting, and Public API that was using IBM Product and Next JS. The product is IBM Business Automation Workflow as Backend and Next JS as Frontend. \n
                 `}
             logoUrl={`${getImagePrefix()}/image/blog-1.svg`}
            />
