@@ -1,6 +1,6 @@
 
 import nodemailer from "nodemailer";
-import { Interested } from "../../../../utils/nums"; // Gunakan alias jika sudah disetting di tsconfig.json
+import { Interested } from "@/helper/enums"; // Gunakan alias jika sudah disetting di tsconfig.json
 
 export async function POST(request) {
   try {
