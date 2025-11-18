@@ -35,7 +35,7 @@ export default function Portfolio() {
       <JobExperience />
       <Resume />
       <Contact />
-      <Footer />
+      <Footer /> 
     </div>
   );
 }
