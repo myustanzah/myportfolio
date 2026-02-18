@@ -23,7 +23,6 @@ export function Footer() {
                 </Typography>
               </li>
             ))}
-            <Button color="gray">subscribe</Button>
           </ul>
         </div>
       </div>

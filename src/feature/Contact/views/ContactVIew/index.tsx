@@ -10,7 +10,7 @@ import {
   Button,
   IconButton,
 } from "@material-tailwind/react";
-import { EnvelopeIcon, PhoneIcon, TicketIcon } from "@heroicons/react/24/solid";
+import { EnvelopeIcon, PhoneIcon } from "@heroicons/react/24/solid";
 import { useEffect, useRef, useState } from "react";
 import { ContactFormProps } from "./props";
 
@@ -148,12 +148,29 @@ export function ContactForm() {
                   </a>
                 </Typography>
               </div>
-              <div className="flex items-center gap-5">
-                <IconButton variant="text" color="white">
+              <div className="flex my-2 items-center gap-5">
+                <IconButton variant="text" color="white" className="h-6 w-6">
                   <a href="https://github.com/myustanzah" target="_blank" rel="noopener noreferrer">
-                    <i className="fa-brands fa-github text-lg" />
+                    <i className="fa-brands fa-github text-lg" /> 
                   </a>
                 </IconButton>
+                <Typography variant="h6" color="white" className="mb-2">
+                  <a href="https://github.com/myustanzah" target="_blank" rel="noopener noreferrer">
+                    My Github
+                  </a>
+                </Typography>
+              </div>
+              <div className="flex my-2 items-center gap-5">
+                <IconButton variant="text" color="white" className="h-6 w-6">
+                  <a href="https://github.com/myustanzah" target="_blank" rel="noopener noreferrer">
+                    <i className="fa-brands fa-linkedin text-lg" /> 
+                  </a>
+                </IconButton>
+                <Typography variant="h6" color="white" className="mb-2">
+                  <a href="https://linkedin.com/in/yustanzah" target="_blank" rel="noopener noreferrer">
+                    My LinkedIn
+                  </a>
+                </Typography>
               </div>
             </div>
             <div className="w-full mt-8 md:mt-0 md:px-10 col-span-4 h-full p-5">
