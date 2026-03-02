@@ -8,7 +8,7 @@ export function Footer() {
       <div className="container mx-auto">
         <div className="mt-16 flex flex-wrap items-center justify-center gap-y-4 border-t border-gray-200 py-6 md:justify-between">
           <Typography className="text-center font-normal dark:text-white">
-            &copy; {CURRENT_YEAR} Made by{" "} Muhammad Yustanzah S.Kom
+            &copy; {CURRENT_YEAR} Made by{" "} Yustanzah. All rights reserved.
           </Typography>
           <ul className="flex gap-8 items-center">
             {LINK_MENU.map((link, i) => (

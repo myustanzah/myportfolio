@@ -6,6 +6,7 @@ import {
 } from "@heroicons/react/24/solid";
 import { ResumeItem } from "./components/ResumeItems";
 import { RESUME_ITEMS } from "./data";
+import Link from "next/link";
 
 
 
@@ -30,7 +31,7 @@ export function Resume() {
           <Button
             variant="text"
             color="gray"
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 border border-black dark:border-white dark:text-white"
             onClick={handleOpenPdf}
           >
             view more
@@ -42,9 +43,9 @@ export function Resume() {
         </div>
         <div className="col-span-1 grid gap-y-6 lg:ml-auto pr-0 lg:pr-12 xl:pr-32">
           {RESUME_ITEMS.map((props, idx) => (
-            <a href={props.imgPath} key={idx} target="_blank">
+            <Link href={props.imgPath} key={idx} target="_blank">
               <ResumeItem {...props} />
-            </a>
+            </Link>
           ))}
         </div>
       </div>

@@ -33,7 +33,7 @@ export function Navbar() {
     <MTNavbar shadow={false} fullWidth className="dark:bg-black border-0 sticky top-0 z-50">
       <div className="container mx-auto flex items-center justify-between">
         <Typography color={theme.theme === "light" ? "black" : "white"} className="text-3xl font-bold">
-          My Portfolio
+          MYQ
         </Typography>
         <ul className="ml-10 hidden items-center gap-8 lg:flex">
           {NAV_MENU.map(({ name, icon: Icon, href }) => (
