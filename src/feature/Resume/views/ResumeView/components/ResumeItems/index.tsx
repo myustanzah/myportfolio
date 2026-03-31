@@ -14,9 +14,13 @@ export function ResumeItem({ icon: Icon, children }: ResumeItemProps) {
       >
         <Icon className="h-6 w-6" strokeWidth={2} />
       </Card>
-      <Typography className="w-full font-normal text-gray-500 dark:text-white">
-        {children}
-      </Typography>
+      <Card
+        className="w-full h-12 items-center justify-center shadow-none bg-transparent rounded-none p-0 border-0"
+      >
+        <Typography className="w-full font-normal text-gray-500 dark:text-white">
+          {children}
+        </Typography>
+      </Card>
     </div>
   );
 }

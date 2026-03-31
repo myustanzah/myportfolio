@@ -18,4 +18,14 @@ export const RESUME_ITEMS = [
     children: "IBM CMOD on Cloud - Essentials",
     imgPath: "/_sertificate/cmod.pdf"
   },
+  {
+    icon: CursorArrowRaysIcon,
+    children: "IBM CP4BA - Professional Excellence",
+    imgPath: "/_sertificate/ibm-cp4ba.pdf"
+  },
+  {
+    icon: PuzzlePieceIcon,
+    children: "HackerRank Javascript Basic",
+    imgPath: "/_sertificate/js-basic.pdf"
+  },
 ];
