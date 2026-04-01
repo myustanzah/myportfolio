@@ -28,4 +28,9 @@ export const RESUME_ITEMS = [
     children: "HackerRank Javascript Basic",
     imgPath: "/_sertificate/js-basic.pdf"
   },
+  {
+    icon: PuzzlePieceIcon,
+    children: "Karrier.mu X IPB University | Augmented Reality",
+    imgPath: "/_sertificate/augmented-reality.pdf"
+  },
 ];
