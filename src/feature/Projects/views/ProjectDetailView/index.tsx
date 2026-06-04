@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+import { useMemo, useState } from "react";
 import { portfolioData } from "./props";
 
 interface ProjectDetailProps {
@@ -9,7 +12,11 @@ interface ProjectDetailProps {
 }
 
 export default function ProjectDetailView({ params }: ProjectDetailProps) {
-  const project = portfolioData[params.slug];
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  // const project = portfolioData[params.slug];
+  const project = useMemo(() => {
+    return portfolioData[params.slug];
+  }, [params.slug]);
 
   if (!project) {
     return (
@@ -17,6 +24,34 @@ export default function ProjectDetailView({ params }: ProjectDetailProps) {
         Project Not Found
       </div>
     );
+  }
+
+  // const images = project.images || [project.image];
+
+  const images = useMemo(() => {
+    return project?.images?.length
+      ? project.images
+      : project?.image
+      ? [project.image]
+      : [];
+  }, [project]);
+  // const totalImages = images.length;
+  const totalImages = useMemo(() => images.length, [images]);
+
+  const nextSlide = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % totalImages);
+  };
+
+  const prevSlide = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex - 1 + totalImages) % totalImages);
+  };
+
+  const goToSlide = (index: number) => {
+    setCurrentImageIndex(index);
+  };
+
+  if (!project || images.length === 0) {
+    return <div>Loading...</div>;
   }
 
   return (
@@ -34,15 +69,84 @@ export default function ProjectDetailView({ params }: ProjectDetailProps) {
         <p className="text-gray-600 text-lg mb-8">
           {project.description}
         </p>
-        <div className="relative w-full aspect-[16/7] rounded-2xl overflow-hidden shadow-lg mb-10">
-          <Image
-            src={project.image}
-            alt={project.title}
-            fill
-            sizes="100vw"
-            priority
-            className="object-cover"
-          />
+        {/* Image Slider */}
+        <div className="mb-10">
+          <div className="relative w-full aspect-[16/7] rounded-2xl overflow-hidden shadow-lg bg-gray-100">
+            <Image
+              src={images[currentImageIndex]}
+              alt={`${project.title} - Image ${currentImageIndex + 1}`}
+              fill
+              sizes="100vw"
+              priority
+              className="object-contain transition-opacity duration-300"
+            />
+
+            {/* Navigation Buttons */}
+            {totalImages > 1 && (
+              <>
+                <button
+                  onClick={prevSlide}
+                  className="absolute left-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition z-10"
+                  aria-label="Previous image"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M15 19l-7-7 7-7"
+                    />
+                  </svg>
+                </button>
+
+                <button
+                  onClick={nextSlide}
+                  className="absolute right-4 top-1/2 -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition z-10"
+                  aria-label="Next image"
+                >
+                  <svg
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M9 5l7 7-7 7"
+                    />
+                  </svg>
+                </button>
+
+                {/* Image Counter */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 bg-black/50 text-white px-3 py-1 rounded-full text-sm font-medium">
+                  {currentImageIndex + 1} / {totalImages}
+                </div>
+
+                {/* Indicator Dots */}
+                <div className="absolute bottom-4 right-4 flex gap-2">
+                  {images.map((_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => goToSlide(index)}
+                      className={`w-2 h-2 rounded-full transition ${
+                        index === currentImageIndex
+                          ? "bg-white"
+                          : "bg-white/50 hover:bg-white/75"
+                      }`}
+                      aria-label={`Go to image ${index + 1}`}
+                    />
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
         </div>
         <div className="mb-10">
           <h2 className="text-2xl font-semibold mb-4">Tech Stack</h2>
