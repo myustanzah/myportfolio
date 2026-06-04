@@ -13,20 +13,10 @@ interface ProjectDetailProps {
 
 export default function ProjectDetailView({ params }: ProjectDetailProps) {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  // const project = portfolioData[params.slug];
+  
   const project = useMemo(() => {
     return portfolioData[params.slug];
   }, [params.slug]);
-
-  if (!project) {
-    return (
-      <div className="min-h-screen flex items-center justify-center text-xl font-semibold">
-        Project Not Found
-      </div>
-    );
-  }
-
-  // const images = project.images || [project.image];
 
   const images = useMemo(() => {
     return project?.images?.length
@@ -35,8 +25,16 @@ export default function ProjectDetailView({ params }: ProjectDetailProps) {
       ? [project.image]
       : [];
   }, [project]);
-  // const totalImages = images.length;
+  
   const totalImages = useMemo(() => images.length, [images]);
+
+  if (!project) {
+    return (
+      <div className="min-h-screen flex items-center justify-center text-xl font-semibold">
+        Project Not Found
+      </div>
+    );
+  }
 
   const nextSlide = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % totalImages);

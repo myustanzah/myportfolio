@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useCallback } from "react";
 
 type Particle = {
   x: number;
@@ -13,12 +13,13 @@ type Particle = {
 
 const ParticlesBackground = () => {
   const canvasRef = useRef<HTMLCanvasElement>(null);
-  const particles: Particle[] = [];
+  const particlesRef = useRef<Particle[]>([]);
   const numParticles = 20;
 
   const minDistance = 30; // minimal jarak antar shape
 
-  const createParticles = (width: number, height: number) => {
+  const createParticles = useCallback((width: number, height: number) => {
+    const particles = particlesRef.current;
     let attempts = 0;
 
     for (let i = 0; i < numParticles; i++) {
@@ -53,7 +54,7 @@ const ParticlesBackground = () => {
         shape: getRandomShape(), // bisa "star", "triangle", "circle", "square", dll
         });
     }
-};
+  }, [numParticles, minDistance]);
 
   const getRandomShape = (): Particle["shape"] => {
     const shapes: Particle["shape"][] = ["triangle", "circle", "square", "cross"];
@@ -144,6 +145,7 @@ const drawSquare = (
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
     createParticles(canvas.width, canvas.height);
+    const particles = particlesRef.current;
 
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -186,7 +188,7 @@ const drawSquare = (
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [createParticles]);
 
   return (
     <canvas

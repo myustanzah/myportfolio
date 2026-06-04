@@ -1,4 +1,5 @@
 import { FC } from 'react';
+import Image from 'next/image';
 
 interface JobExperienceCardProps {
   company: string;
@@ -21,10 +22,12 @@ const JobExperienceCard: FC<JobExperienceCardProps> = ({
     <div className="flex flex-col sm:flex-row bg-white shadow-md rounded-2xl p-6 border hover:shadow-lg transition duration-300 ease-in-out whitespace-pre-line">
       {logoUrl && (
         <div className="flex-shrink-0 mb-4 sm:mb-0 sm:mr-6">
-          <img
+          <Image
             src={logoUrl}
             alt={`${company} logo`}
-            className="w-16 h-16 rounded-md object-contain"
+            width={64}
+            height={64}
+            className="rounded-md object-contain"
           />
         </div>
       )}
