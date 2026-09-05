@@ -12,6 +12,10 @@ export const LINK_MENU = [
     href: "#section-jobexperience",
   },
   {
+    name: "My Achievements",
+    href: "#section-certificate",
+  },
+  {
     name: "Contact Me",
     href: "#section-contact",
   },

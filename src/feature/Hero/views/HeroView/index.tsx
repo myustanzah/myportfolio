@@ -18,9 +18,13 @@ function Hero() {
     setEmail(value);
   }
 
-  function handleSubmit(){
-    window.location.href = `mailto:muhammadyustanzah@gmail.com?body=Hallo%20Yus%20!`;
-  }
+  // function handleSubmit(){
+  //   window.location.href = `mailto:muhammadyustanzah@gmail.com?body=Hallo%20Yus%20!`;
+  // }
+
+   const handleOpenPdf = () => {
+    window.open('/pdf/UpdateResume.pdf', '_blank');
+  };
 
   return (
     <header className="dark:bg-black bg-white p-8">
@@ -42,17 +46,17 @@ function Hero() {
             development, where creativity meets functionality.
           </Typography>
           <div className="grid">
-            <Typography
+            {/* <Typography
               variant="small"
               className="mb-2 text-gray-900 dark:text-gray-100 font-medium"
             >
               Your email
-            </Typography>
+            </Typography> */}
             <div className="mb-2 flex w-full flex-col gap-4 md:w-10/12 md:flex-row">
               {/* @ts-ignore */}
-              <Input color="gray" label="Enter your email" size="lg" onChange={handleEmailChange} />
-              <Button color="gray" className="w-full px-4 md:w-[12rem]" onClick={handleSubmit}>
-                require offer
+              {/* <Input color="gray" label="Enter your email" size="lg" onChange={handleEmailChange} /> */}
+              <Button color="gray" className="w-full px-4 md:w-[12rem]" onClick={handleOpenPdf}>
+                My Resume
               </Button>
             </div>
           </div>

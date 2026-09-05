@@ -10,7 +10,7 @@ import Hero from "@/feature/Hero/views/HeroView";
 import Projects from "@/feature/Projects/views/ProjectView";
 import JobExperience from "@/feature/JobExperience/views/JobExperienceView";
 import Skills from "@/feature/Skills/views/SkillsView";
-import Resume from "@/feature/Resume/views/ResumeView";
+import Certificate from "@/feature/Certificate/views/CertificateView";
 import ParticlesBackground from "@/components/ParticlesBackground";
 
 const fadeInUp = {
@@ -38,9 +38,7 @@ export default function Portfolio() {
   return (
     <div className="dark:bg-black">
       <ParticlesBackground/>
-      <motion.div initial={{ opacity: 0, y: -20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>
-        <Navbar />
-      </motion.div>
+      <Navbar />
 
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp}>
         <Hero />
@@ -55,7 +53,7 @@ export default function Portfolio() {
         <JobExperience />
       </motion.div>
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp}>
-        <Resume />
+        <Certificate />
       </motion.div>
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp}>
         <Contact />

@@ -1,4 +1,4 @@
-import { CommandLineIcon, RectangleStackIcon, UserCircleIcon, ChatBubbleLeftRightIcon, BriefcaseIcon } from "@heroicons/react/24/solid";
+import { RectangleStackIcon, UserCircleIcon, ChatBubbleLeftRightIcon, BriefcaseIcon, AcademicCapIcon } from "@heroicons/react/24/solid";
 
 export const NAV_MENU = [
   {
@@ -15,6 +15,11 @@ export const NAV_MENU = [
     name: "Job Experience",
     icon: BriefcaseIcon,
     href: "#section-jobexperience",
+  },
+  {
+    name: "MyAchievements",
+    icon: AcademicCapIcon,
+    href: "#section-certificate",
   },
   {
     name: "Contact Me",
