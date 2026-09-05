@@ -1,4 +1,4 @@
-import JobExperienceCard from './components/JobExperienceCard';
+import LazyJobExperienceCard from './components/LazyJobExperienceCard';
 import { JobExperienceProps } from './props';
 import { dataExperience } from './data';
 
@@ -26,7 +26,7 @@ export default function ExperienceSection() {
           {
             dataExperience.map((experience: JobExperienceProps.Experience, index) => {
                 return (
-                  <JobExperienceCard
+                  <LazyJobExperienceCard
                     key={index}
                     index={index + 1}
                     company={experience.company}

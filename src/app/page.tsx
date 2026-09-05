@@ -52,9 +52,7 @@ export default function Portfolio() {
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp}>
         <JobExperience />
       </motion.div>
-      <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp}>
-        <Certificate />
-      </motion.div>
+      <Certificate />
       <motion.div initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.2 }} variants={fadeInUp}>
         <Contact />
       </motion.div>
