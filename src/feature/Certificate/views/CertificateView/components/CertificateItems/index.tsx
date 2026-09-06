@@ -15,9 +15,9 @@ export function CertificateItem({ icon: Icon, children, imgPath, index }: Certif
     <article className="h-full overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm transition-[transform,box-shadow,border-color] duration-300 will-change-transform group-hover:-translate-y-1 group-hover:border-blue-200 group-hover:shadow-xl group-hover:shadow-blue-900/10 dark:border-slate-800 dark:bg-[#111827] dark:shadow-black/20 dark:group-hover:border-blue-800 dark:group-hover:shadow-blue-950/30">
       <div className="relative flex h-44 items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-700">
         <div className="absolute -right-8 -top-10 h-36 w-36 rounded-full bg-blue-400/15" />
-        <div className="absolute left-5 top-5 z-10 text-xs font-bold tracking-[0.2em] text-white/60">
+        {/* <div className="absolute left-5 top-5 z-10 text-xs font-bold tracking-[0.2em] text-black/60">
           CERTIFICATE {String(index).padStart(2, "0")}
-        </div>
+        </div> */}
         {isImage ? (
           <Image
             src={imgPath}
